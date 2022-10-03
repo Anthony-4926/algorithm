@@ -6,12 +6,12 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func maxDepth(root *TreeNode) int {
+func MaxDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	left := maxDepth(root.Left)
-	right := maxDepth(root.Right)
+	left := MaxDepth(root.Left)
+	right := MaxDepth(root.Right)
 	if left > right {
 		return left + 1
 	}
